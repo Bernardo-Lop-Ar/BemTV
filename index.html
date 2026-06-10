@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BemTV Premium</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BemTV</div>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar filmes..."
+        >
+    </nav>
+
+    <header class="banner" id="banner">
+        <div class="banner-content">
+            <h1 id="bannerTitle">BemTV Premium</h1>
+
+            <p id="bannerPlot">
+                Pesquise filmes e séries utilizando a OMDb API.
+            </p>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Resultados</h2>
+
+            <div class="movies-row" id="moviesContainer"></div>
+        </section>
+
+        <section>
+            <h2>Minha Lista</h2>
+
+            <div class="movies-row" id="favoritesContainer"></div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close" id="closeModal">
+                &times;
+            </span>
+
+            <div id="movieDetails"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
