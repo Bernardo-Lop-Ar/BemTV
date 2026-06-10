@@ -225,3 +225,30 @@ async function loadFavorites(){
 }
 
 searchMovies("Batman");
+function login(){
+
+    const user =
+    document.getElementById("user").value;
+
+    const password =
+    document.getElementById("password").value;
+
+    if(
+        user === "admin" &&
+        password === "123456"
+    ){
+
+        document.getElementById(
+            "loginScreen"
+        ).style.display = "none";
+
+    }else{
+
+        document.getElementById(
+            "loginError"
+        ).textContent =
+        "Usuário ou senha inválidos";
+
+    }
+
+}

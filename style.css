@@ -189,3 +189,108 @@ section h2{
         font-size:2.5rem;
     }
 }
+
+.login-screen{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.4),
+        rgba(0,0,0,.8)
+    ),
+    url("login-f.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 9999;
+}
+
+.login-box{
+    width: 400px;
+
+    padding: 40px;
+
+    background: rgba(0,0,0,.75);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(229,9,20,.3);
+
+    box-shadow:
+    0 0 25px rgba(229,9,20,.4);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.login-box h1{
+    text-align:center;
+    color:white;
+}
+
+.login-box span{
+    color:#e50914;
+}
+
+.login-box input{
+    padding:15px;
+
+    background:#111;
+
+    border:1px solid #333;
+
+    border-radius:10px;
+
+    color:white;
+
+    outline:none;
+}
+
+.login-box input:focus{
+    border-color:#e50914;
+}
+
+.login-box button{
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#e50914;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#ff1f2c;
+}
+
+.register{
+    text-align:center;
+}
+
+.register a{
+    color:#e50914;
+    text-decoration:none;
+}
+
+#loginError{
+    color:red;
+    text-align:center;
+}
