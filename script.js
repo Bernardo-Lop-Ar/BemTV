@@ -157,6 +157,12 @@ async function openMovie(id, bannerMode = false){
 
                 </button>
 
+                <button
+                    class="favorite-btn"
+                    onclick="excluirFavorite('${movie.imdbID}')">
+                    Remover da Lista
+                </button>
+
             </div>
 
         </div>
@@ -191,6 +197,25 @@ async function addFavorite(id){
     );
 
     loadFavorites();
+
+    modal.style.display = "none";
+} 
+
+
+function excluirFavorite(id){
+
+    favorites = favorites.filter(
+        favoriteId => favoriteId !== id
+    );
+
+    localStorage.setItem(
+        "favorites",
+        JSON.stringify(favorites)
+    );
+
+    loadFavorites();
+
+    modal.style.display = "none";
 }
 
 async function loadFavorites(){
@@ -224,7 +249,8 @@ async function loadFavorites(){
     }
 }
 
-searchMovies("Batman");
+searchMovies("Spider man");
+
 function login(){
 
     const user =
